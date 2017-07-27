@@ -24,17 +24,17 @@ var library = {
                       name: "Other Playlist",
                       tracks: ["t03"]
                     }
-             }
+             },
   printPlaylists: function () {
-    var playlist = library['playlists']
+    var playlist = library['playlists'];
     for (var key in playlist) {
-      console.log(`${key}: ${playlist[key].name} - ${playlist[key].tracks.length} tracks`)
+      console.log(`${key}: ${playlist[key].name} - ${playlist[key].tracks.length} tracks`);
     }
   },
   printTracks: function () {
-    var tracks = library['tracks']
+    var tracks = library['tracks'];
     for (var key in tracks) {
-      console.log(`${key}: ${tracks[key].name} by ${tracks[key].name} (${tracks[key].album}). `)
+      console.log(`${key}: ${tracks[key].name} by ${tracks[key].name} (${tracks[key].album}). `);
     }
   },
   printPlaylist: function (playlistId) {
@@ -45,15 +45,15 @@ var library = {
     for (var key in track) {
       var trackInfo = track[key];
       var trackObj = library.tracks[trackInfo];
-      console.log(`${trackObj.id}: ${trackObj.name} by ${trackObj.artist} (${trackObj.album})`)
+      console.log(`${trackObj.id}: ${trackObj.name} by ${trackObj.artist} (${trackObj.album})`);
     }
   },
   addTrackToPlaylist: function (trackId, playlistId) {
     var playlist = library.playlists[playlistId].tracks;
-    playlist.push(trackId)
+    playlist.push(trackId);
     console.log(playlist);
   },
-  var addTrack: function (name, artist, album) {
+  addTrack: function (name, artist, album) {
   var id = uid();
     library.tracks[id] = {
       id,
@@ -62,7 +62,7 @@ var library = {
       album
     }
   },
-  var addPlaylist: function (name) {
+  addPlaylist: function (name) {
   var id = uid()
     library.playlists[id] = {
       id,
@@ -71,7 +71,7 @@ var library = {
   }
 }
 
-library.printPlaylists();
+console.log(library);
 // FUNCTIONS TO IMPLEMENT:
 
 // prints a list of all playlists, in the form:

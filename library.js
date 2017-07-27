@@ -67,6 +67,7 @@ var printPlaylist = function (playlistId) {
     console.log(`${trackObj.id}: ${trackObj.name} by ${trackObj.artist} (${trackObj.album})`)
   }
 }
+printPlaylist("p01")
 
 // adds an existing track to an existing playlist
 
